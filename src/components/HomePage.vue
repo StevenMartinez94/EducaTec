@@ -1,14 +1,15 @@
 <template>
   <header>
     <div class="container">
-        <h1 class="icon">EducaTec</h1>
+        <img src="../../public/educatec-branding.png">
+        <h1>EducaTec</h1>
         <input type="checkbox" id="menu-bar">
         <label class="icon-menu" for="menu-bar"></label>
         <nav class='menu'>
-            <a href="">Acerca de nosotros</a>
+            <a href="">Inicio</a>
             <a href="">Cursos</a>
-            <a href="">Contáctanos</a>
-            <a href="">Últimas Noticias</a>
+            <a href="./about">Acerca de nosotros</a>
+            <a href="./contact">Contáctanos</a>
         </nav>
     </div>
   </header>
@@ -25,43 +26,46 @@
 
     <section id='welcome'>
         <h2>¿Deseas prepararte para trabajar en el área de tecnología?</h2>
-        <p>{Info acerca de los beneficios de la plataforma}</p>
+        <p>EducaTec, como plataforma educativa, ofrece una serie de módulos de aprendizaje que permiten desarrollar conocimientos referentes a las áreas más demandadas dentro de las aclamadas Tecnologías de La Información y la Comunicación (TICs), esto con el objetivo de desarrollar los conocimientos que servirán como base para los futuros profesionales del mañana.</p>
     </section>
 
     <section id='presentation'>
         <h3>¿Qué ofrecemos?</h3>
         <div class='container'>
-            <article>
-                <img src="../../public/programming-img.jpg" alt="">
+            <div>
+                <img src="../../public/programming-img.jpg">
+                <a class="centered" href="">Leer más</a>
                 <h4>Estudia Programación</h4>
-            </article>
-            <article>
-                <img src="../../public/db-img.jpeg" alt="">
+            </div>
+            <div>
+                <img src="../../public/db-img.jpeg">
+                <a class="centered" href="https://www.wikipedia.org/">Leer más</a>
                 <h4>Estudia Bases de Datos</h4>
-            </article>
-            <article>
-                <img src="../../public/ciber-img.jpeg" alt="">
+            </div>
+            <div>
+                <img src="../../public/ciber-img.jpeg">
+                <a class="centered" href="">Leer más</a>
                 <h4>Estudia Ciberseguridad</h4>
-            </article>
+            </div>
         </div>
     </section>
     <section id='info'>
         <h3>En EducaTec creemos inherentemente en el potencial de la juventud para liderar la industria tecnológica de las próximas décadas.</h3>
         <div class='container'>
+            <article class="info-course">
+                <img src="../../public/teen1.png">
+                <h4></h4>
+            </article>
             <div class="info-course">
-                <img src="../../public/teen1.png" alt="">
+                <img src="../../public/teen2.png">
                 <h4></h4>
             </div>
             <div class="info-course">
-                <img src="../../public/teen2.png" alt="">
+                <img src="../../public/teen3.png">
                 <h4></h4>
             </div>
             <div class="info-course">
-                <img src="../../public/teen3.png" alt="">
-                <h4></h4>
-            </div>
-            <div class="info-course">
-                <img src="../../public/teen4.png" alt="">
+                <img src="../../public/teen4.png">
                 <h4></h4>
             </div>
         </div>
@@ -70,11 +74,17 @@
 
   <footer>
     <div class='container'>
-        <p class='copy'>EducaTec &copy; 2022</p>
+        <p class='copyright'>EducaTec &copy; 2022</p>
         <div class='social-media'>
-            <img src="../../public/fb-logo.png">
-            <img src="../../public/ig-logo.png">
-            <img src="../../public/twitter-logo.png">
+            <a href="">
+                <img src="../../public/fb-logo.png">
+            </a>
+            <a href="">
+                <img src="../../public/ig-logo.png">
+            </a>
+            <a href="">
+                <img src="../../public/twitter-logo.png">
+            </a>
         </div>
     </div>
   </footer>
@@ -112,10 +122,17 @@ export default {
 
     h1 {
         float: left;
+        padding-top: 7px;
     }
 
     header .container {
         display: table;
+    }
+
+    header img { 
+        float: left;
+        padding-top: 8px;
+        padding-right: 3px;
     }
 
     #menu-bar {
@@ -184,9 +201,13 @@ export default {
     #welcome {
         text-align: center;
     }
-    
+
+    #welcome p {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
     #banner {
-        margin-top: 50px;
         position: relative;
     }
 
@@ -238,7 +259,7 @@ export default {
         }
 
         #banner img {
-            height: auto;
+            height: 600px;
             margin-top: -100px;
         }
     }
@@ -259,13 +280,39 @@ export default {
         flex-wrap: wrap;
     }
 
-    #presentation article {
+    #presentation .container div {
         margin: 15px;
     }
 
-    #presentation img {
+    #presentation .container img {
         width: 100%;
         max-width: 280px;
+        cursor: pointer;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    #presentation .container div {
+        position: relative;
+        text-align: center;
+        color: black;
+    }
+
+    #presentation .container div .centered {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+    }
+
+    #presentation .container img:hover+.centered {
+        display: block;
+    }
+
+    #presentation .container div:hover>img {
+        opacity: 0.2 !important;
+        transition: opacity 0.4s;
     }
 
     #info {
@@ -311,7 +358,7 @@ export default {
         padding-bottom: 25px;
     }
 
-    .copy {
+    .copyright {
         font-size: 20px;
     }
 

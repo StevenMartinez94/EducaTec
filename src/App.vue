@@ -1,15 +1,14 @@
 <template>
   <img alt="EducaTec-logo" src="../public/educatec-logo.png">
-  <HomePage/>
+  <div>
+    <router-view/>
+  </div>
+  
 </template>
 
 <script>
-import HomePage from '@/components/HomePage.vue'
 export default {
   name: 'App',
-  components: {
-    HomePage
-  }
 }
 </script>
 

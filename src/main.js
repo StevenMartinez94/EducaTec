@@ -1,4 +1,19 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import HomePage from '@/components/HomePage'
+import AboutUs from '@/components/AboutUs'
+import { createRouter, createWebHistory } from 'vue-router'
 
-createApp(App).mount('#app')
+const routes = [
+    { path: '/', component: HomePage },
+    { path: '/contact', component: AboutUs },
+]
+
+const router = createRouter({
+    history: createWebHistory(),
+    routes
+})
+
+const Educatec = createApp(App)
+Educatec.use(router)
+Educatec.mount('#app')
