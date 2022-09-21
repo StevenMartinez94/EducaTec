@@ -7,7 +7,7 @@
         <label class="icon-menu" for="menu-bar"></label>
         <nav class='menu'>
             <a href="./">Inicio</a>
-            <a href="">Cursos</a>
+            <a href="./login">Cursos</a>
             <a href="./about">Acerca de nosotros</a>
             <a href="./contact">Contáctanos</a>
         </nav>
