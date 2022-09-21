@@ -32,21 +32,21 @@
     <section id='presentation'>
         <h3>¿Qué ofrecemos?</h3>
         <div class='container'>
-            <div>
+            <a href="">
                 <img src="../../public/programming-img.jpg">
-                <a class="centered" href="">Leer más</a>
+                <!--<a class="centered" href="">Leer más</a> -->
                 <h4>Estudia Programación</h4>
-            </div>
-            <div>
+            </a>
+            <a href="">
                 <img src="../../public/db-img.jpeg">
-                <a class="centered" href="https://www.wikipedia.org/">Leer más</a>
+                <!--<a class="centered" href="">Leer más</a> -->
                 <h4>Estudia Bases de Datos</h4>
-            </div>
-            <div>
+            </a>
+            <a href="">
                 <img src="../../public/ciber-img.jpeg">
-                <a class="centered" href="">Leer más</a>
+                <!--<a class="centered" href="">Leer más</a> -->
                 <h4>Estudia Ciberseguridad</h4>
-            </div>
+            </a>
         </div>
     </section>
     <section id='info'>
@@ -280,37 +280,21 @@ export default {
         flex-wrap: wrap;
     }
 
-    #presentation .container div {
+    #presentation .container a {
         margin: 15px;
     }
 
-    #presentation .container img {
+    #presentation .container a img {
         width: 100%;
         max-width: 280px;
-        cursor: pointer;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
-    #presentation .container div {
-        position: relative;
-        text-align: center;
-        color: black;
+    #presentation .container h4 {
+        color: #333;
     }
 
-    #presentation .container div .centered {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: none;
-    }
-
-    #presentation .container img:hover+.centered {
-        display: block;
-    }
-
-    #presentation .container div:hover>img {
+    #presentation .container a img:hover {
         opacity: 0.2 !important;
         transition: opacity 0.4s;
     }
@@ -358,7 +342,7 @@ export default {
         padding-bottom: 25px;
     }
 
-    .copyright {
+    footer .copyright {
         font-size: 20px;
     }
 

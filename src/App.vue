@@ -1,5 +1,5 @@
 <template>
-  <img alt="EducaTec-logo" src="../public/educatec-logo.png">
+  <img alt="EducaTec-logo" src="../public/educatec-new.png">
   <div>
     <router-view/>
   </div>
