@@ -16,31 +16,28 @@
 
   <main>
     <section id='info'>
-        <h2>¡Contáctanos!, te invitamos a utilizar los siguientes medios:</h2>
+        <div>
+            <h2>¿Qué es EducaTec?</h2>
+            <p>
+                EducaTec es un entorno digital en el que se imparten conocimientos que hacen posible el aprendizaje en diferentes medios informáticos.
+            </p>
+        </div>
+        <hr>
         <div class='container'>
-            <article class="info-contact">
+        <h2>¿Quieres saber acerca de nosotros?</h2>
+            <article class="info-person">
                 <a href="">
-                    <img src="../../public/facebook.png">
+                    <img src="../../public/steven.jpg">
                 </a>
-                <h4>Coméntanos en nuestra página de Facebook</h4>
+                <h4>Albert Martínez <br> - Desarrollador Front-End -</h4>
+                <p>Es un desarrollador Front-End que día a día transita por el camino de convertirse en desarrollador Full-Stack, dominando nuevas tecnologías un paso a la vez.</p>
             </article>
-            <article class="info-contact">
+            <article class="info-person">
                 <a href="">
-                    <img src="../../public/instagram.jpg">
+                    <img src="../../public/enrique.jpg">
                 </a>
-                <h4>Escríbenos a nuestra cuenta de Instagram</h4>
-            </article>
-            <article class="info-contact">
-                <a href="">
-                    <img src="../../public/twitter.jpg">
-                </a>
-                <h4>Te invitamos a twittear en nuestros hilos</h4>
-            </article>
-            <article class="info-contact">
-                <a href="">
-                    <img src="../../public/teen4.png">
-                </a>
-                <h4>Puedes mandar un email a soporte@educatec.net</h4>
+                <h4>Enrique Rodríguez <br> - Desarrollador Back-End -</h4>
+                <p>Es un entusiasta del Back-End y un perfeccionista sin descanso que entrega todo de sí para poder lograr el más alto rendimiento en su applicaciones web.</p>
             </article>
         </div>
     </section>
@@ -172,14 +169,18 @@ export default {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-
     }
 
-    .info-contact {
+    #info p {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .info-person {
         margin: 20px;
     }
 
-    .info-contact img {
+    .info-person img {
         width: 180px;
         height: 180px;
         border-radius: 50%;
@@ -187,13 +188,13 @@ export default {
     }
 
     @media (min-width: 480px) {
-        .info-contact {
+        .info-person {
             width: 40%;
         }
     }
 
     @media (min-width: 1024px) {
-        .info-contact {
+        .info-person {
             width: auto;
         }
     }
@@ -236,5 +237,9 @@ export default {
         .container {
             width: 1000px;
         }
+    }
+
+    hr {
+        margin: 15px;
     }
 </style>
