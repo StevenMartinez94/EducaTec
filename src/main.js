@@ -3,14 +3,16 @@ import App from './App.vue'
 import HomePage from '@/components/HomePage'
 import ContactUs from '@/components/ContactUs'
 import AboutUs from '@/components/AboutUs'
-import Login from '@/components/LoginPage'
+import RegisterNew from '@/components/RegisterNew'
+import LoginNew from '@/components/LoginNew'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
     { path: '/', component: HomePage },
     { path: '/contact', component: ContactUs },
     { path: '/about', component: AboutUs },
-    { path: '/login', component: Login }
+    { path: '/register', component: RegisterNew },
+    { path: '/login', component: LoginNew }
 ]
 
 const router = createRouter({
