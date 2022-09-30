@@ -1,5 +1,4 @@
 <template>
-  <NavBar/>
   <img alt="EducaTec-logo" src="../public/prueba.png">
   <div>
     <router-view/>
@@ -8,19 +7,12 @@
 </template>
 
 <script>
-import NavBar from '@/components/NavBar.vue'
-//export default {
-//  name: 'App',
-//}
 export default {
-  components: {
-    NavBar
-  }
+  name: 'App',
 }
 </script>
 
-<style lang='scss'>
-@import './scss/App.scss';
+<style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
