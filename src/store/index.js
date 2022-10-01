@@ -1,7 +1,7 @@
 import { createStore } from "vuex";
 import router from '@/routes/index'
 import { auth } from '../firebase/init'
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, deleteUser, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 
 export default createStore({
@@ -40,7 +40,7 @@ export default createStore({
 
             commit('SET_USER', auth.currentUser)
 
-            router.push('/')
+            router.push('/dashboard-usr')
         },
 
         async register ({commit}, details) {
@@ -52,27 +52,40 @@ export default createStore({
                 switch ( error.code ) {
                     case 'auth/email-already-in-use' :
                       alert ( "Ese email está en uso" )
+                      router.push('/login')
                      break
                     case 'auth/invalid-email' :
                       alert ( "Email inválido" )
+                      router.push('/login')
                       break
                     case 'auth/operation-not-allowed' :
                       alert ( "Operación no permitida" )
+                      router.push('/login')
                       break
                     case 'auth/weak-password':
                       alert ( "Prueba con una contraseña más robusta" )
+                      router.push('/login')
                       break
                    default:
                       alert ( "Algo salió mal" )
-
+                      router.push('/login')
                 return
             }}
 
             commit('SET_USER', auth.currentUser)
 
-            router.push('/')
+            router.push('/dashboard-usr')
         },
        
+        async delete() {
+            try{
+                await deleteUser(this.user)
+            }
+            finally{
+                alert("Usuario borrado")
+            }
+        },
+
         async logout ({commit}) {
             await signOut(auth)
 
@@ -85,10 +98,11 @@ export default createStore({
          auth.onAuthStateChanged(async user => { 
             if (user === null){ 
                 commit('CLEAR_USER')
-             } else {commit('SET_USER')
-               if (router.isReady() && router.currentRoute.value.path === '/login' ) {
-                router.push('/')
-               }
+             } else {
+                commit('SET_USER', user)
+                if (router.isReady() && router.currentRoute.value.path === '/login' ) {
+                    router.push('/dashboard-usr')
+                }
             } 
          })   
         }

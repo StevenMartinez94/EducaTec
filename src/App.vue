@@ -1,11 +1,6 @@
 <template>
   <img alt="EducaTec-logo" src="../public/prueba.png">
-  <div v-if="$store.state.user"> 
-    <router-view/>
-    <button @click="$store.dispatch('logout')">Logout</button>
-
-  </div>
-  
+  <router-view/>  
 </template>
 
 <script>
@@ -14,33 +9,13 @@ export default {
 }
 </script>
 
-<script>
-import { onBeforeMount } from 'vue'
-import { useStore } from 'vuex'
-
-export default { 
-  setup() {
-    const store = useStore()
-    
-    onBeforeMount(()=> {
-      store.dispatch)('fetchUser')
-    })
-    
-    }
-  }
-
-}
-
-</script>
-
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #256fba;
   margin-top: 60px;
 }
 </style>

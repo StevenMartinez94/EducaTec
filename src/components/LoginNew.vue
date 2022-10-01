@@ -19,13 +19,13 @@
         <h2>Registro</h2>
         <input type="email" placeholder="Dirección de email" v-model="register_form.email">
         <input type="password" placeholder="Contraseña" v-model="register_form.password">
-        <input type="submit" value="Register">
+        <input type="submit" value="Registrarse">
       </form>
       <form action="" class="login" @submit.prevent="login">
         <h2>Iniciar sesión</h2>
         <input type="email" placeholder="Dirección de email" v-model="login_form.email">
         <input type="password" placeholder="Contraseña" v-model="login_form.password">
-        <input type="submit" value="Login">
+        <input type="submit" value="Entrar">
       </form>
     </section>
   </main>
@@ -71,11 +71,11 @@ form {
 
 form.register {
     color: #FFF;
-    background-color: rgb(245, 66, 101); 
+    background-color: rgb(5,126,225); 
     background-image: linear-gradient(
       to bottom right, 
-      rgb(245, 66, 101) 0%,
-      rgb(189, 28, 60) 100% 
+      rgb(5,126,225) 0%,
+      rgb(60, 28, 189) 100%
     );
 }
 
@@ -115,12 +115,11 @@ input::placeholder {
 }
 
 form.login input:not([type="submit"]) {
-     color: #2c3e50;
-     border-bottom: 2px solid #2c3e50;
+  color: #2c3e50;border-bottom: 2px solid #2c3e50;
 }
 
 form.login input[type="submit"] {
-  background-color: rgb(245, 66, 101);
+  background-color: rgb(5,126,225);
   color: #FFF;
   font-weight: 700;
   padding: 1rem 2rem;
@@ -132,12 +131,16 @@ form.login input[type="submit"] {
 
 form.register input[type="submit"] {
   background-color: #FFF;
-  color: rgb(245, 66, 101);
+  color: rgb(5,126,225);
   font-weight: 700;
   padding: 1rem 2rem;
   border-radius: 0.5rem; 
   cursor: pointer;
   text-transform: uppercase;
-  
 }
+
+form.register input:not([type="submit"]) {
+  border-bottom: 2px solid #2c3e50;
+}
+
 </style>

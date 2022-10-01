@@ -37,7 +37,7 @@
             </article>
             <article class="info-contact">
                 <a href="">
-                    <img src="../../public/teen4.png">
+                    <img src="../../public/email-icon.png">
                 </a>
                 <h4>Puedes mandar un email a soporte@educatec.net</h4>
             </article>
