@@ -1,7 +1,9 @@
 <template>
   <img alt="EducaTec-logo" src="../public/prueba.png">
-  <div>
+  <div v-if="$store.state.user"> 
     <router-view/>
+    <button @click="$store.dispatch('logout')">Logout</button>
+
   </div>
   
 </template>
