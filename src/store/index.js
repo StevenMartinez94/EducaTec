@@ -47,6 +47,8 @@ export default createStore({
             const { email, password } = details
             try{
                 await createUserWithEmailAndPassword(auth, email, password)
+                commit('SET_USER', auth.currentUser)
+                router.push('/dashboard-usr')
             }
             catch (error) {
                 switch ( error.code ) {
@@ -69,12 +71,8 @@ export default createStore({
                    default:
                       alert ( "Algo salió mal" )
                       router.push('/login')
-                return
+                router.push('/login')
             }}
-
-            commit('SET_USER', auth.currentUser)
-
-            router.push('/dashboard-usr')
         },
        
         async delete() {

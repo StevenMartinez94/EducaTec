@@ -4,6 +4,7 @@ import ContactUs from '@/components/ContactUs'
 import AboutUs from '@/components/AboutUs'
 import LoginNew from '@/components/LoginNew'
 import UsrDashboard from '@/components/UserDashboard'
+import AdmDashboard from '@/components/AdmDashboard'
 import CourseList from '@/components/CourseList'
 import { auth } from '@/firebase/init'
 
@@ -13,6 +14,7 @@ const routes = [
     { path: '/about', component: AboutUs },
     { path: '/login', component: LoginNew },
     { path: '/dashboard-usr', component: UsrDashboard,meta: {requiresAuth: true}},
+    { path: '/dashboard-adm', component: AdmDashboard,meta: {requiresAuth: true}},
     { path: '/course-list', component: CourseList}
 ]
 

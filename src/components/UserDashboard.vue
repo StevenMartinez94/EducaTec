@@ -74,9 +74,9 @@
 				
 				<div class="person-box">
 					<a href="/">
-                        <img id="logout" src="../../public/logout-circle.png">
-                        <h4>Salir del dashboard</h4>
-                    </a>
+            <img id="logout" src="../../public/logout-circle.png">
+            <h4>Salir del dashboard</h4>
+          </a>
 				</div>
 			</section>
 		</div>
