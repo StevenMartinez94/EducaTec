@@ -31,17 +31,17 @@
     <section id='presentation'>
         <h3>¿Qué ofrecemos?</h3>
         <div class='container'>
-            <a href="">
+            <a href="/login">
                 <img src="../../public/programming-img.jpg">
                 <!--<a class="centered" href="">Leer más</a> -->
                 <h4>Estudia Programación</h4>
             </a>
-            <a href="">
+            <a href="/login">
                 <img src="../../public/db-img.jpeg">
                 <!--<a class="centered" href="">Leer más</a> -->
                 <h4>Estudia Bases de Datos</h4>
             </a>
-            <a href="">
+            <a href="/login">
                 <img src="../../public/ciber-img.jpeg">
                 <!--<a class="centered" href="">Leer más</a> -->
                 <h4>Estudia Ciberseguridad</h4>

@@ -1,6 +1,6 @@
 import { createStore } from "vuex";
 import router from '@/routes/index'
-import { auth } from '../firebase/init'
+import { auth } from '../firebase/init.adm'
 import { createUserWithEmailAndPassword, deleteUser, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 
@@ -34,53 +34,29 @@ export default createStore({
                     default:
                         alert ( "Algo salió mal " )
                 }
-
                 return
             }
 
             commit('SET_USER', auth.currentUser)
 
-            router.push('/dashboard-usr')
+            router.push('/dashboard-adm')
         },
-
-        async register ({commit}, details) {
-            const { email, password } = details
+     
+        async deleteUser(user) {
             try{
-                await createUserWithEmailAndPassword(auth, email, password)
-                commit('SET_USER', auth.currentUser)
-                router.push('/dashboard-usr')
-            }
-            catch (error) {
-                switch ( error.code ) {
-                    case 'auth/email-already-in-use' :
-                      alert ( "Ese email está en uso" )
-                      router.push('/login')
-                     break
-                    case 'auth/invalid-email' :
-                      alert ( "Email inválido" )
-                      router.push('/login')
-                      break
-                    case 'auth/operation-not-allowed' :
-                      alert ( "Operación no permitida" )
-                      router.push('/login')
-                      break
-                    case 'auth/weak-password':
-                      alert ( "Prueba con una contraseña más robusta" )
-                      router.push('/login')
-                      break
-                   default:
-                      alert ( "Algo salió mal" )
-                      router.push('/login')
-                router.push('/login')
-            }}
-        },
-       
-        async delete() {
-            try{
-                await deleteUser(this.user)
+                await deleteUser(user)
             }
             finally{
                 alert("Usuario borrado")
+            }
+        },
+
+        async createUser(user) {
+            try{
+                await createUserWithEmailAndPassword(user)
+            }
+            finally{
+                alert("Usuario creado")
             }
         },
 
@@ -98,12 +74,11 @@ export default createStore({
                 commit('CLEAR_USER')
              } else {
                 commit('SET_USER', user)
-                if (router.isReady() && router.currentRoute.value.path === '/login' ) {
-                    router.push('/dashboard-usr')
+                if (router.isReady() && router.currentRoute.value.path === '/login-adm' ) {
+                    router.push('/dashboard-adm')
                 }
             } 
          })   
         }
-
     }
 })

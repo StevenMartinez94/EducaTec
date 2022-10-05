@@ -95,12 +95,10 @@ export default {
 * {
   box-sizing: border-box;
 }
-html,
 body {
   color: #99a0b0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   background: #f5f5fa;
   font-size: 16px;
   line-height: 120%;
