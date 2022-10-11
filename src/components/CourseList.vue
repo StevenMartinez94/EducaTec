@@ -21,7 +21,7 @@
 		<p>
 			Aprende programación desde cero. Domina la tecnología más demandada en la industria. Mejora tus habilidades y conocimientos desarrollando la lógica de programación.
 		</p>
-		<a href="./courses/intro-prog">
+		<a href="../courses/intro-prog">
       <button>Entrar al curso</button>
     </a>
 	</li>
