@@ -15,7 +15,7 @@ const routes = [
     { path: '/login', component: UsrLogin },
     { path: '/dashboard-usr', component: UsrDashboard, meta: {requiresAuth: true}},
     { path: '/course-list', component: CourseList},
-    { path: '/intro-prog', component: IntroProg},
+    { path: '/courses/intro-prog', component: IntroProg}
 ]
 
 const router = createRouter({
