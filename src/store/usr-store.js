@@ -1,7 +1,7 @@
 import { createStore } from "vuex";
 import router from '@/routes/index'
 import { auth } from '../firebase/init'
-import { createUserWithEmailAndPassword, deleteUser, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 
 export default createStore({
@@ -75,15 +75,7 @@ export default createStore({
             }}
         },
        
-        async deleteUser(user) {
-            try{
-                await deleteUser(user)
-            }
-            finally{
-                alert("Usuario borrado")
-            }
-        },
-
+        
         async createUser(user) {
             try{
                 await createUserWithEmailAndPassword(user)
