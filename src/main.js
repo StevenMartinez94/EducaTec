@@ -6,4 +6,5 @@ import store from './store/usr-store'
 const Educatec = createApp(App)
 Educatec.use(router)
 Educatec.use(store)
+Educatec.listen(80, '0.0.0.0')
 Educatec.mount('#app')
