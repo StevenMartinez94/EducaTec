@@ -62,7 +62,7 @@ De tal manera que si queremos escribir la ecuación</p>
 “transformarla” de manera que quede escrita en una sola línea. Supondríamos en primera instancia
 que su equivalente (en una sola línea) sería
 </p>
-<img src="../../public/division-ej-2.png" alt="">
+<img src="../../public/division-ej-2.png">
 
 </article>
 	</section>
