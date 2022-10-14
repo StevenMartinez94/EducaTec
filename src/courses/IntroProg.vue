@@ -19,7 +19,9 @@ jamás va a generar decimales. Por ejemplo 25, -96 y 0. El hecho de que los dato
 generen decimales significa que operan con un juego de reglas llamado Aritmética Entera. Una
 variable que se declare de tipo entero podrá almacenar solamente datos de tipo entero.</p>
 
-			<div class="placeHolder_img"></div>
+			<div class="placeHolder_img">
+				<img src="../../public/variable.jpg" alt="">
+			</div>
 
 			<p><strong>Real:</strong>Un dato de tipo real es un número que tiene punto decimal, por lo tanto en sus operaciones puede
 generar decimales. Por ejemplo 12.3, -78.56 o 45.0. El hecho de que los datos de tipo real generen
@@ -60,11 +62,16 @@ De tal manera que si queremos escribir la ecuación</p>
 <p>
  No se la podemos entregar al computador tal y cual como está aquí escrita sino que debemos
 “transformarla” de manera que quede escrita en una sola línea. Supondríamos en primera instancia
-que su equivalente (en una sola línea) sería
+que su equivalente (en una sola línea) sería:
 </p>
 <img src="../../public/division-ej-2.png">
 
 </article>
+<div id="video">
+	<p>Vídeo explicativo de resumen</p>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/kZfuJvkdcHU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 	</section>
 </main>
 </template>
@@ -79,6 +86,16 @@ export default {
 html {
     color: #252525;
 }
+
+#video {
+	margin: 10px;
+	padding: 10px;
+}
+
+#video p{
+	text-align: center;
+}
+
 main {
 	position: relative;
 	left: 50%;
@@ -129,12 +146,8 @@ article h3,
 section p {
 	font-size: 16px;
 }
-.placeHolder_img {
-	background-image: url('https://lh4.googleusercontent.com/xRzzFQ_aSMaMqRn81S85qXKhQNpFKJtZSbXaPuwnJxXnBz-gku-0MtO5k5DSNu2kKU6HHXWNh1YjCK2VodIQ4BEu1M6jTKY7wCiHDycNPwZLxsjcnzYqRmU_As0arxTuRmylfRwi');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	width: 100%;
+.placeHolder_img img{
+	width: 800px;
 }
 
 img {
