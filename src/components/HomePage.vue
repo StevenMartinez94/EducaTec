@@ -1,5 +1,5 @@
 <template>
-  <header>
+<header>
     <div class="container">
         <img src="../../public/educatec-branding.png">
         <h1>EducaTec</h1>
@@ -7,13 +7,12 @@
         <label class="icon-menu" for="menu-bar"></label>
         <nav class='menu'>
             <a href="./">Inicio</a>
-            <a href="">Cursos</a>
+            <a href="./login">Cursos</a>
             <a href="./about">Acerca de nosotros</a>
             <a href="./contact">Contáctanos</a>
         </nav>
     </div>
   </header>
-
   <main>
     <section id='banner'>
         <img src="../../public/banner.png">
@@ -32,17 +31,17 @@
     <section id='presentation'>
         <h3>¿Qué ofrecemos?</h3>
         <div class='container'>
-            <a href="">
+            <a href="/login">
                 <img src="../../public/programming-img.jpg">
                 <!--<a class="centered" href="">Leer más</a> -->
                 <h4>Estudia Programación</h4>
             </a>
-            <a href="">
+            <a href="/login">
                 <img src="../../public/db-img.jpeg">
                 <!--<a class="centered" href="">Leer más</a> -->
                 <h4>Estudia Bases de Datos</h4>
             </a>
-            <a href="">
+            <a href="/login">
                 <img src="../../public/ciber-img.jpeg">
                 <!--<a class="centered" href="">Leer más</a> -->
                 <h4>Estudia Ciberseguridad</h4>
@@ -53,20 +52,20 @@
         <h3>En EducaTec creemos inherentemente en el potencial de la juventud para liderar la industria tecnológica de las próximas décadas.</h3>
         <div class='container'>
             <article class="info-course">
-                <img src="../../public/teen1.png">
-                <h4></h4>
+                <img src="../../public/it-mac.jpg">
+                <h4>¡Conviértete en un profesional de TI!</h4>
             </article>
             <div class="info-course">
-                <img src="../../public/teen2.png">
-                <h4></h4>
+                <img src="../../public/team.jpg">
+                <h4>¡Elabora soluciones con tu equipo de trabajo!</h4>
             </div>
             <div class="info-course">
-                <img src="../../public/teen3.png">
-                <h4></h4>
+                <img src="../../public/dedicate.jpg">
+                <h4>¡Dedícate al área de TI que te apasione!</h4>
             </div>
             <div class="info-course">
-                <img src="../../public/teen4.png">
-                <h4></h4>
+                <img src="../../public/internet.png">
+                <h4>Contribuye al desarrollo del internet</h4>
             </div>
         </div>
     </section>
@@ -133,6 +132,10 @@ export default {
         float: left;
         padding-top: 8px;
         padding-right: 3px;
+    }
+
+    header h1{
+        margin-top: 10px;
     }
 
     #menu-bar {

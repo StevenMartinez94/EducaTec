@@ -1,21 +1,11 @@
+import 'mdb-vue-ui-kit/css/mdb.min.css'
 import { createApp } from 'vue'
 import App from './App.vue'
-import HomePage from '@/components/HomePage'
-import ContactUs from '@/components/ContactUs'
-import AboutUs from '@/components/AboutUs'
-import { createRouter, createWebHistory } from 'vue-router'
-
-const routes = [
-    { path: '/', component: HomePage },
-    { path: '/contact', component: ContactUs },
-    { path: '/about', component: AboutUs }
-]
-
-const router = createRouter({
-    history: createWebHistory(),
-    routes
-})
+import router from '@/routes'
+import store from './store/usr-store'
 
 const Educatec = createApp(App)
 Educatec.use(router)
+Educatec.use(store)
+//Educatec.listen(80, '0.0.0.0')
 Educatec.mount('#app')

@@ -1,5 +1,5 @@
 <template>
-  <header>
+ <header>
     <div class="container">
         <img src="../../public/educatec-branding.png">
         <h1>EducaTec</h1>
@@ -7,13 +7,12 @@
         <label class="icon-menu" for="menu-bar"></label>
         <nav class='menu'>
             <a href="./">Inicio</a>
-            <a href="">Cursos</a>
+            <a href="./login">Cursos</a>
             <a href="./about">Acerca de nosotros</a>
             <a href="./contact">Contáctanos</a>
         </nav>
     </div>
   </header>
-
   <main>
     <section id='info'>
         <div>

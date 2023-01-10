@@ -1,5 +1,5 @@
 <template>
-  <header>
+<header>
     <div class="container">
         <img src="../../public/educatec-branding.png">
         <h1>EducaTec</h1>
@@ -7,13 +7,12 @@
         <label class="icon-menu" for="menu-bar"></label>
         <nav class='menu'>
             <a href="./">Inicio</a>
-            <a href="">Cursos</a>
+            <a href="./login">Cursos</a>
             <a href="./about">Acerca de nosotros</a>
             <a href="./contact">Contáctanos</a>
         </nav>
     </div>
   </header>
-
   <main>
     <section id='info'>
         <h2>¡Contáctanos!, te invitamos a utilizar los siguientes medios:</h2>
@@ -38,7 +37,7 @@
             </article>
             <article class="info-contact">
                 <a href="">
-                    <img src="../../public/teen4.png">
+                    <img src="../../public/email-icon.png">
                 </a>
                 <h4>Puedes mandar un email a soporte@educatec.net</h4>
             </article>
