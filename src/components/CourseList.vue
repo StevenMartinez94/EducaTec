@@ -1,71 +1,106 @@
-<template>
-  <header>
-    <div class="container">
-        <img src="../../public/educatec-branding.png">
-        <h1>EducaTec</h1>
-        <input type="checkbox" id="menu-bar">
-        <label class="icon-menu" for="menu-bar"></label>
-        <nav class='menu'>
-            <a href="./">Inicio</a>
-            <a href="">Cursos</a>
-            <a href="./about">Acerca de nosotros</a>
-            <a href="./contact">Contáctanos</a>
-        </nav>
-    </div>
-  </header>
-  <div>
-    <ul class="tilesWrap">
-	<li>
-		<h2>01</h2>
-		<h3>Introducción a la programación</h3>
-		<p>
-			Aprende programación desde cero. Domina la tecnología más demandada en la industria. Mejora tus habilidades y conocimientos desarrollando la lógica de programación.
-		</p>
-		<a href="../courses/intro-prog">
-      <button>Entrar al curso</button>
-    </a>
-	</li>
-	<li>
-		<h2>02</h2>
-		<h3>Introducción a la bases de datos</h3>
-		<p>
-			En este curso de base de datos aprenderás a elaborar bases de datos relacionales, para que se te faciliten diversas operaciones productivas y estratégicas.
-		</p>
-		<a href="">
-      <button>Próximamente</button>
-    </a>
-	</li>
-	<li>
-		<h2>03</h2>
-		<h3>Microsoft Word - De principiante a experto</h3>
-		<p>
-			En este curso de Word aprenderás a utilizar todas las funcionalidades que trae el software, por medio de la creación, edición y distribución de documentos.
-		</p>
-		<a href="">
-      <button>Próximamente</button>
-    </a>
-	</li>
-	<li>
-		<h2>04</h2>
-		<h3>Microsoft Excel - De principiante a experto</h3>
-		<p>
-			Aprende Excel desde lo básico a lo avanzado con este curso práctico donde podrás aprender paso a paso y con imágenes descriptivas también incluídas.
-		</p>
-		<a href="">
-      <button>Próximamente</button>
-    </a>
-	</li>
-</ul>
-  </div>
+<!-- eslint-disable no-mixed-spaces-and-tabs -->
+<template> 
+<body>
+	<header>
+		<div class="container">
+			<img src="../../public/educatec-branding.png">
+			<h1>EducaTec</h1>
+			<input type="checkbox" id="menu-bar">
+			<label class="icon-menu" for="menu-bar"></label>
+			<nav class='menu'>
+				<a href="./">Inicio</a>
+				<a href="">Cursos</a>
+				<a href="./about">Acerca de nosotros</a>
+				<a href="./contact">Contáctanos</a>
+			</nav>
+		</div>
+	  </header>
+	  <div>
+		<ul class="tilesWrap">
+		<li>
+			<h2>01</h2>
+			<h3>Introducción a la programación</h3>
+			<p>
+				Aprende programación desde cero. Domina la tecnología más demandada en la industria. Mejora tus habilidades y conocimientos desarrollando la lógica de programación.
+			</p>
+			<a href="../courses/intro-prog">
+		  <button>Entrar al curso</button>
+		</a>
+		</li>
+		<li>
+			<h2>02</h2>
+			<h3>Introducción a la bases de datos</h3>
+			<p>
+				En este curso de base de datos aprenderás a elaborar bases de datos relacionales, para que se te faciliten diversas operaciones productivas y estratégicas.
+			</p>
+			<a href="">
+		  <button>Próximamente</button>
+		</a>
+		</li>
+		<li>
+			<h2>03</h2>
+			<h3>Microsoft Word - De principiante a experto</h3>
+			<p>
+				En este curso de Word aprenderás a utilizar todas las funcionalidades que trae el software, por medio de la creación, edición y distribución de documentos.
+			</p>
+			<a href="">
+		  <button>Próximamente</button>
+		</a>
+		</li>
+		<li>
+			<h2>04</h2>
+			<h3>Microsoft Excel - De principiante a experto</h3>
+			<p>
+				Aprende Excel desde lo básico a lo avanzado con este curso práctico donde podrás aprender paso a paso y con imágenes descriptivas también incluídas.
+			</p>
+			<a href="">
+		  <button>Próximamente</button>
+		</a>
+		</li>
+	</ul>
+	  </div>
+</body>
 </template>
 
 <script>
-export default {
+//import { getApp } from "firebase/app";
+//const firebaseConfig = {
+//  apiKey: "AIzaSyDBej0AzmiLbCTNW4Q9p96IR7whyWCCb9o",
+//  authDomain: "educatec-f675c.firebaseapp.com",
+//  databaseURL: "https://educatec-f675c-default-rtdb.firebaseio.com",
+//  projectId: "educatec-f675c",
+//  storageBucket: "educatec-f675c.appspot.com",
+//  messagingSenderId: "998023685281",
+//  appId: "1:998023685281:web:faede9c977778f60047ce0"
+//};
+//
+//app = getApp('firebaseConfig')
+//console.log(app)
 
-}
+
+//import { createStore } from "vuex";
+//export default createStore({
+//    state: {
+//        user: 
+//    },
+//    mutations: {
+//        SET_USER (state, user) {
+//            state.user= user
+//        },
+//
+//        CLEAR_USER (state) {
+//            state.user = null
+//        }
+//    },
+//    actions:{
+//       checkUserCourses(user){
+//        console.log(user.uid);
+//      }
+//    }
+//})
 </script>
 
-<style>
+<style scoped>
 
 .tilesWrap {
 	padding: 0;

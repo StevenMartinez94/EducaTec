@@ -77,9 +77,6 @@ que su equivalente (en una sola línea) sería:
 </template>
 
 <script>
-export default {
-
-}
 </script>
 
 <style scoped>

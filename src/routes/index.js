@@ -6,9 +6,11 @@ import UsrLogin from '@/components/UserLogin'
 import UsrDashboard from '@/components/UserDashboard'
 import CourseList from '@/components/CourseList'
 import IntroProg from '@/courses/IntroProg'
+import Testing from '@/courses/TestingTool'
 import { auth } from '@/firebase/init'
 
 const routes = [
+    { path: '/courses/testing', component: Testing},
     { path: '/', component: HomePage },
     { path: '/contact', component: ContactUs },
     { path: '/about', component: AboutUs },

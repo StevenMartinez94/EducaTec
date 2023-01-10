@@ -46,7 +46,7 @@
 
       const register = () => {
         store.dispatch('register', register_form.value)
-      }      
+      }
 
       return {
         login_form,
@@ -54,8 +54,8 @@
         login,
         register
       }
+    }
   }
-}
 </script>
 
 <style>

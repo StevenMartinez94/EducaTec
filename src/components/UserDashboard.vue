@@ -1,7 +1,7 @@
 <template>
   <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -83,12 +83,30 @@
 	</main>
 </div>  
 </body>
-</template>
+</template>p
 
 <script>
-export default {
-
-}
+//import { createStore } from "vuex";
+//
+//export default createStore({
+//    state: {
+//        user: null
+//    },
+//    mutations: {
+//        SET_USER (state, user) {
+//            state.user= user
+//        },
+//
+//        CLEAR_USER (state) {
+//            state.user = null
+//        }
+//    },
+//    actions:{
+//       checkUserCourses(user){
+//        console.log(user.uid);
+//      }
+//    }
+//})
 </script>
 
 <style>
