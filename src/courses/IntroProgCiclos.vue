@@ -236,6 +236,9 @@
         ></iframe>
       </div>
     </section>
+    <router-link to="/courses/intro-prog/ciclos">
+      <button>Siguiente Lección</button>
+    </router-link>
   </main>
 </template>
 

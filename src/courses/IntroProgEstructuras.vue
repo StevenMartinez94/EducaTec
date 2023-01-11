@@ -445,6 +445,9 @@
         ></iframe>
       </div>
     </section>
+    <router-link to="/courses/intro-prog/decisiones">
+      <button>Siguiente Lección</button>
+    </router-link>
   </main>
 </template>
 

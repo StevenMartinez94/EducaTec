@@ -161,6 +161,9 @@
         ></iframe>
       </div>
     </section>
+    <router-link to="/courses/intro-prog/estructuras">
+      <button>Siguiente Lección</button>
+    </router-link>
   </main>
 </template>
 

@@ -203,6 +203,9 @@
         ></iframe>
       </div>
     </section>
+    <router-link to="/quiz">
+      <button>Realizar Evaluación</button>
+    </router-link>
   </main>
 </template>
 
