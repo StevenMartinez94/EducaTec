@@ -6,10 +6,10 @@
       <input type="checkbox" id="menu-bar" />
       <label class="icon-menu" for="menu-bar"></label>
       <nav class="menu">
-        <a href="./">Inicio</a>
-        <a href="">Cursos</a>
-        <a href="./about">Acerca de nosotros</a>
-        <a href="./contact">Contáctanos</a>
+        <router-link to="./">Inicio</router-link>
+        <router-link to="">Cursos</router-link>
+        <router-link to="./about">Acerca de nosotros</router-link>
+        <router-link to="./contact">Contáctanos</router-link>
       </nav>
     </div>
   </header>

@@ -47,30 +47,28 @@
     <section v-else>
       <h2>Has completado el questionario</h2>
       <p>Tu puntaje es {{ score }} / {{ questions.length }}</p>
-      <button id="submit" @click="save()">Guardar resultado</button>
+      <router-link to="/course-list">
+        <button id="submit" @click="writeObjectData()">
+          Guardar resultado
+        </button>
+      </router-link>
     </section>
   </main>
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from "vue";
-import { writeObjectData, getObjectData } from "@/firebase/init";
+import { ref, computed } from "vue";
+import { writeObjectData } from "@/firebase/init";
+import store from "@/store/usr-store";
 
-//"/usr" + store.state.user.email;
-
-onMounted(() => {
-  writeObjectData(
-    {
-      name: "Introduccion a Excel",
-      iscompleted: true,
-    },
-    "/users/emailpanita"
-  );
-
-  const data = getObjectData("/users");
-
-  console.log(data);
-});
+writeObjectData(
+  {
+    name: "Introduccion a la Programación",
+    isCompleted: true,
+    email: store.state.user.email,
+  },
+  "/users/" + store.state.user.uid
+);
 
 const questions = ref([
   {
@@ -161,7 +159,7 @@ h1 {
 }
 
 .quiz {
-  background-color: orange;
+  background-color: white;
   padding: 1rem;
   width: 100%;
   max-width: 650px;
@@ -190,7 +188,6 @@ h1 {
 .option {
   padding: 1rem;
   display: block;
-  background-color: blue;
   margin-bottom: 0.5rem;
   border-radius: 0.5rem;
   cursor: pointer;

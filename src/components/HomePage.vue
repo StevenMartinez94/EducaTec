@@ -6,10 +6,10 @@
       <input type="checkbox" id="menu-bar" />
       <label class="icon-menu" for="menu-bar"></label>
       <nav class="menu">
-        <a href="./">Inicio</a>
-        <a href="./login">Cursos</a>
-        <a href="./about">Acerca de nosotros</a>
-        <a href="./contact">Contáctanos</a>
+        <router-link to="./">Inicio</router-link>
+        <router-link to="./login">Cursos</router-link>
+        <router-link to="./about">Acerca de nosotros</router-link>
+        <router-link to="./contact">Contáctanos</router-link>
       </nav>
     </div>
   </header>
@@ -22,7 +22,7 @@
           EducaTec te ofrece la mejor educación acerca de las más interesantes
           tecnologías
         </p>
-        <a href="">Leer más</a>
+        <router-link to="">Leer más</router-link>
       </div>
     </section>
 
@@ -41,21 +41,21 @@
     <section id="presentation">
       <h3>¿Qué ofrecemos?</h3>
       <div class="container">
-        <a href="/login">
+        <router-link to="/login">
           <img src="../../public/programming-img.jpg" />
           <!--<a class="centered" href="">Leer más</a> -->
           <h4>Estudia Programación</h4>
-        </a>
-        <a href="/login">
+        </router-link>
+        <router-link to="/login">
           <img src="../../public/db-img.jpeg" />
           <!--<a class="centered" href="">Leer más</a> -->
           <h4>Estudia Bases de Datos</h4>
-        </a>
-        <a href="/login">
+        </router-link>
+        <router-link to="/login">
           <img src="../../public/ciber-img.jpeg" />
           <!--<a class="centered" href="">Leer más</a> -->
           <h4>Estudia Ciberseguridad</h4>
-        </a>
+        </router-link>
       </div>
     </section>
     <section id="info">
@@ -88,15 +88,15 @@
     <div class="container">
       <p class="copyright">EducaTec &copy; 2022</p>
       <div class="social-media">
-        <a href="">
+        <router-link to="">
           <img src="../../public/fb-logo.png" />
-        </a>
-        <a href="">
+        </router-link>
+        <router-link to="">
           <img src="../../public/ig-logo.png" />
-        </a>
-        <a href="">
+        </router-link>
+        <router-link to="">
           <img src="../../public/twitter-logo.png" />
-        </a>
+        </router-link>
       </div>
     </div>
   </footer>
@@ -146,7 +146,7 @@ header img {
 }
 
 header h1 {
-  margin-top: 10px;
+  margin-top: -3px;
 }
 
 #menu-bar {
@@ -223,6 +223,10 @@ section {
 
 #banner {
   position: relative;
+}
+
+#banner .container p{
+  margin-top: -25px;
 }
 
 #banner img {

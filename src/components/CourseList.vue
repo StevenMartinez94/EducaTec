@@ -7,10 +7,10 @@
         <input type="checkbox" id="menu-bar" />
         <label class="icon-menu" for="menu-bar"></label>
         <nav class="menu">
-          <a href="./">Inicio</a>
-          <a href="">Cursos</a>
-          <a href="./about">Acerca de nosotros</a>
-          <a href="./contact">Contáctanos</a>
+          <router-link to="./">Inicio</router-link>
+          <router-link to="">Cursos</router-link>
+          <router-link to="./about">Acerca de nosotros</router-link>
+          <router-link to="./contact">Contáctanos</router-link>
         </nav>
       </div>
     </header>
@@ -24,11 +24,11 @@
             en la industria. Mejora tus habilidades y conocimientos
             desarrollando la lógica de programación.
           </p>
-          <router-link to="/courses/intro-prog">
+          <router-link to="/courses/intro-prog/variables">
             <button>Entrar al curso</button>
           </router-link>
 
-          <!--{{isCourseCompleted('intro-prog') ? 'Completado' : 'No Completado' }}-->
+          {{ isCourseCompleted() ? "Completado" : "" }}
         </li>
         <li>
           <h2>02</h2>
@@ -38,9 +38,9 @@
             relacionales, para que se te faciliten diversas operaciones
             productivas y estratégicas.
           </p>
-          <a href="">
+          <router-link to="">
             <button>Próximamente</button>
-          </a>
+          </router-link>
         </li>
         <li>
           <h2>03</h2>
@@ -50,9 +50,9 @@
             funcionalidades que trae el software, por medio de la creación,
             edición y distribución de documentos.
           </p>
-          <a href="">
+          <router-link to="">
             <button>Próximamente</button>
-          </a>
+          </router-link>
         </li>
         <li>
           <h2>04</h2>
@@ -62,9 +62,9 @@
             donde podrás aprender paso a paso y con imágenes descriptivas
             también incluídas.
           </p>
-          <a href="">
+          <router-link to="">
             <button>Próximamente</button>
-          </a>
+          </router-link>
         </li>
       </ul>
     </div>
@@ -73,16 +73,16 @@
 
 <script setup>
 import { getObjectData } from "@/firebase/init";
+import store from "@/store/usr-store";
 
-const data = getObjectData("/users");
-console.log(data);
-//const completedCourse = [
-//	'intro-prog'
-//]
-
-//const isCourseCompleted = (courseName) => {
-//	return completedCourse.some(course => course === courseName)
-//}
+const userData = getObjectData("/users/" + store.state.user.uid);
+const isCourseCompleted = () => {
+  if (userData != null) {
+    return userData.isCompleted;
+  } else {
+    return false;
+  }
+};
 </script>
 
 <style scoped>

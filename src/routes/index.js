@@ -5,21 +5,29 @@ import AboutUs from '@/components/AboutUs'
 import UsrLogin from '@/components/UserLogin'
 import UsrDashboard from '@/components/UserDashboard'
 import CourseList from '@/components/CourseList'
-import IntroProg from '@/courses/IntroProg'
-import Testing from '@/courses/TestingTool'
+import IntroProgVariables from '@/courses/IntroProgVariables'
+import IntroProgDecisiones from '@/courses/IntroProgDecisiones'
+import IntroProgCiclos from '@/courses/IntroProgCiclos'
+import IntroProgArreglos from '@/courses/IntroProgArreglos'
+import IntroProgFunciones from '@/courses/IntroProgFunciones'
+import IntroProgEstructuras from '@/courses/IntroProgEstructuras'
 import { auth } from '@/firebase/init'
 import QuizProg from '@/courses/QuizProg'
 import store from '@/store/usr-store'
 
 const routes = [
-    { path: '/courses/testing', component: Testing },
     { path: '/', component: HomePage },
     { path: '/contact', component: ContactUs },
     { path: '/about', component: AboutUs },
     { path: '/login', component: UsrLogin },
     { path: '/dashboard-usr', component: UsrDashboard, meta: { requiresAuth: true } },
     { path: '/course-list', component: CourseList, meta: { requiresAuth: true } },
-    { path: '/courses/intro-prog', component: IntroProg, meta: { requiresAuth: true } },
+    { path: '/courses/intro-prog/variables', component: IntroProgVariables, meta: { requiresAuth: true } },
+    { path: '/courses/intro-prog/decisiones', component: IntroProgDecisiones, meta: { requiresAuth: true } },
+    { path: '/courses/intro-prog/ciclos', component: IntroProgCiclos, meta: { requiresAuth: true } },
+    { path: '/courses/intro-prog/arreglos', component: IntroProgArreglos, meta: { requiresAuth: true } },
+    { path: '/courses/intro-prog/funciones', component: IntroProgFunciones, meta: { requiresAuth: true } },
+    { path: '/courses/intro-prog/estructuras', component: IntroProgEstructuras, meta: { requiresAuth: true } },
     { path: '/quiz', component: QuizProg, meta: { requiresAuth: true } },
 ]
 

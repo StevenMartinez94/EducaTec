@@ -2,7 +2,6 @@ import { createStore } from "vuex";
 import router from '@/routes/index'
 import { auth } from '../firebase/init'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
-//import writeUserData from '@/components/'
 
 export default createStore({
     state: {
@@ -39,19 +38,6 @@ export default createStore({
             }
 
             commit('SET_USER', auth.currentUser)
-            //const userId = auth.currentUser.uid;
-            //console.log(userId)
-            //auth.onAuthStateChanged((user) => {
-            //    if (user) {
-            //      // User logged in already or has just logged in.
-            //      console.log(user.uid);
-            //    } else {
-            //      // User not logged in or has just logged out.
-            //    }
-            //    
-            //  });
-            //FirebaseAuth.getInstance().getCurrentUser().getUid() 
-            //console.log("this is the email: "+ email)
             router.push('/dashboard-usr')
         },
 

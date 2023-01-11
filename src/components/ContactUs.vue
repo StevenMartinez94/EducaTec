@@ -6,10 +6,10 @@
       <input type="checkbox" id="menu-bar" />
       <label class="icon-menu" for="menu-bar"></label>
       <nav class="menu">
-        <a href="./">Inicio</a>
-        <a href="./login">Cursos</a>
-        <a href="./about">Acerca de nosotros</a>
-        <a href="./contact">Contáctanos</a>
+        <router-link to="./">Inicio</router-link>
+        <router-link to="./login">Cursos</router-link>
+        <router-link to="./about">Acerca de nosotros</router-link>
+        <router-link to="./contact">Contáctanos</router-link>
       </nav>
     </div>
   </header>
@@ -18,27 +18,27 @@
       <h2>¡Contáctanos!, te invitamos a utilizar los siguientes medios:</h2>
       <div class="container">
         <article class="info-contact">
-          <a href="">
+          <router-link to="">
             <img src="../../public/facebook.png" />
-          </a>
+          </router-link>
           <h4>Coméntanos en nuestra página de Facebook</h4>
         </article>
         <article class="info-contact">
-          <a href="">
+          <router-link to="">
             <img src="../../public/instagram.jpg" />
-          </a>
+          </router-link>
           <h4>Escríbenos a nuestra cuenta de Instagram</h4>
         </article>
         <article class="info-contact">
-          <a href="">
+          <router-link to="">
             <img src="../../public/twitter.jpg" />
-          </a>
+          </router-link>
           <h4>Te invitamos a twittear en nuestros hilos</h4>
         </article>
         <article class="info-contact">
-          <a href="">
+          <router-link to="">
             <img src="../../public/email-icon.png" />
-          </a>
+          </router-link>
           <h4>Puedes mandar un email a soporte@educatec.net</h4>
         </article>
       </div>

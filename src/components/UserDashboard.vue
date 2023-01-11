@@ -92,25 +92,25 @@
             </div>
 
             <div class="social-box">
-              <a href="">
+              <router-link to="">
                 <img id="facebook" src="../../public/facebook-circle.png" />
-              </a>
-              <a href="">
+              </router-link>
+              <router-link to="">
                 <img id="instagram" src="../../public/ig-circle.png" />
-              </a>
-              <a href="">
+              </router-link>
+              <router-link to="">
                 <img id="twitter" src="../../public/twitter-circle.png" />
-              </a>
-              <a href="">
+              </router-link>
+              <router-link to="">
                 <img id="email" src="../../public/email-icon.png" />
-              </a>
+              </router-link>
             </div>
 
             <div class="person-box">
-              <router-link to="/">
+              <a href="/">
                 <img id="logout" src="../../public/logout-circle.png" />
                 <h4>Salir del dashboard</h4>
-              </router-link>
+              </a>
             </div>
           </section>
         </div>
@@ -120,27 +120,6 @@
 </template>p
 
 <script>
-//import { createStore } from "vuex";
-//
-//export default createStore({
-//    state: {
-//        user: null
-//    },
-//    mutations: {
-//        SET_USER (state, user) {
-//            state.user= user
-//        },
-//
-//        CLEAR_USER (state) {
-//            state.user = null
-//        }
-//    },
-//    actions:{
-//       checkUserCourses(user){
-//        console.log(user.uid);
-//      }
-//    }
-//})
 </script>
 
 <style>

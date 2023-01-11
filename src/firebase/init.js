@@ -33,8 +33,8 @@ export function writeObjectData(payload, collectionPath) {
 export function getObjectData(collectionPath) {
   const collectionReference = ref(database, collectionPath)
   var data = null;
-  onValue(collectionReference, (snapchot) => {
-    data = snapchot.val()
+  onValue(collectionReference, (snapshot) => {
+    data = snapshot.val()
   })
   return data;
 }

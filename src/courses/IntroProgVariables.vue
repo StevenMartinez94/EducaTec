@@ -1,4 +1,50 @@
 <template>
+  <header>
+    <MDBNavbar light bg="light" container>
+      <MDBNavbarToggler
+        @click="collapse1 = !collapse1"
+        target="#navbarToggleExternalContent"
+      >
+      </MDBNavbarToggler>
+    </MDBNavbar>
+    <MDBCollapse v-model="collapse1" id="navbarToggleExternalContent">
+      <div class="bg-light shadow-3 p-4">
+        <router-link to="/courses/intro-prog/variables">
+          <MDBBtn color="link" block class="border-bottom m-0">
+            Variables y Operadores
+          </MDBBtn>
+        </router-link>
+        <router-link to="/courses/intro-prog/estructuras">
+          <MDBBtn color="link" block class="border-bottom m-0">
+            Estructuras básicas
+          </MDBBtn>
+        </router-link>
+        <router-link to="/courses/intro-prog/decisiones">
+          <MDBBtn color="link" block class="border-bottom m-0">
+            Decisiones
+          </MDBBtn>
+        </router-link>
+        <router-link to="/courses/intro-prog/ciclos">
+          <MDBBtn color="link" block class="border-bottom m-0"> Ciclos </MDBBtn>
+        </router-link>
+        <router-link to="/courses/intro-prog/arreglos">
+          <MDBBtn color="link" block class="border-bottom m-0">
+            Arreglos
+          </MDBBtn>
+        </router-link>
+        <router-link to="/courses/intro-prog/funciones">
+          <MDBBtn color="link" block class="border-bottom m-0">
+            Funciones
+          </MDBBtn>
+        </router-link>
+        <router-link to="/quiz">
+          <MDBBtn color="link" block class="border-bottom m-0">
+            Evaluación
+          </MDBBtn>
+        </router-link>
+      </div>
+    </MDBCollapse>
+  </header>
   <main>
     <section>
       <h1>Variables, Constantes y Operadores</h1>
@@ -119,6 +165,27 @@
 </template>
 
 <script>
+import {
+  MDBNavbar,
+  MDBNavbarToggler,
+  MDBCollapse,
+  MDBBtn,
+} from "mdb-vue-ui-kit";
+import { ref } from "vue";
+export default {
+  components: {
+    MDBNavbar,
+    MDBNavbarToggler,
+    MDBCollapse,
+    MDBBtn,
+  },
+  setup() {
+    const collapse1 = ref("/quiz");
+    return {
+      collapse1,
+    };
+  },
+};
 </script>
 
 <style scoped>
@@ -136,7 +203,7 @@ html {
 }
 
 main {
-  position: relative;
+  position: fixed;
   left: 50%;
   transform: translate(-50%, 0);
   max-width: 1280px;
@@ -144,6 +211,7 @@ main {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
+  margin-top: 100px;
 }
 section {
   display: flex;

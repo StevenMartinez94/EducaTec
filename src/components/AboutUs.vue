@@ -6,10 +6,10 @@
       <input type="checkbox" id="menu-bar" />
       <label class="icon-menu" for="menu-bar"></label>
       <nav class="menu">
-        <a href="./">Inicio</a>
-        <a href="./login">Cursos</a>
-        <a href="./about">Acerca de nosotros</a>
-        <a href="./contact">Contáctanos</a>
+        <router-link to="./">Inicio</router-link>
+        <router-link to="./login">Cursos</router-link>
+        <router-link to="./about">Acerca de nosotros</router-link>
+        <router-link to="./contact">Contáctanos</router-link>
       </nav>
     </div>
   </header>
@@ -26,9 +26,9 @@
       <div class="container">
         <h2>¿Quieres saber acerca de nosotros?</h2>
         <article class="info-person">
-          <a href="">
+          <router-link to="">
             <img src="../../public/steven.jpg" />
-          </a>
+          </router-link>
           <h4>
             Albert Martínez <br />
             - Desarrollador Front-End -
@@ -40,9 +40,9 @@
           </p>
         </article>
         <article class="info-person">
-          <a href="">
+          <router-link to="">
             <img src="../../public/enrique.jpg" />
-          </a>
+          </router-link>
           <h4>
             Enrique Rodríguez <br />
             - Desarrollador Back-End -
