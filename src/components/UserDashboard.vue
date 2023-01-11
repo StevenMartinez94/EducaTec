@@ -1,88 +1,122 @@
 <template>
   <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<div class="dashboard">
-	<main class="content-wrap">
-        <span id='title'>
-            <p>DASHBOARD DE USUARIO</p>
-            <hr>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div class="dashboard">
+      <main class="content-wrap">
+        <span id="title">
+          <p>DASHBOARD DE USUARIO</p>
+          <hr />
         </span>
-		<div class="content">
-			<section class="info-boxes">
-				<div class="info-box">
-					<div class="box-icon">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 20V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1zm-2-1H5V5h14v14z"/><path d="M10.381 12.309l3.172 1.586a1 1 0 0 0 1.305-.38l3-5-1.715-1.029-2.523 4.206-3.172-1.586a1.002 1.002 0 0 0-1.305.38l-3 5 1.715 1.029 2.523-4.206z"/></svg>
-					</div>
-					
-					<div class="box-content">
-						<span class="big">¡No pares de<br>aprender!</span>
-						Haz click debajo para<br>acceder a la lista de cursos
-					</div>
-				</div>
-				
-                <div class="info-box">
-					<div class="box-icon">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 3C6.486 3 2 6.364 2 10.5c0 2.742 1.982 5.354 5 6.678V21a.999.999 0 0 0 1.707.707l3.714-3.714C17.74 17.827 22 14.529 22 10.5 22 6.364 17.514 3 12 3zm0 13a.996.996 0 0 0-.707.293L9 18.586V16.5a1 1 0 0 0-.663-.941C5.743 14.629 4 12.596 4 10.5 4 7.468 7.589 5 12 5s8 2.468 8 5.5-3.589 5.5-8 5.5z"/></svg>
-					</div>
-					
-					<div class="box-content">
-						<span class="big">¿Tienes alguna duda?</span>
-						Contáctanos debajo mediante estas redes
-					</div>
-				</div>
+        <div class="content">
+          <section class="info-boxes">
+            <div class="info-box">
+              <div class="box-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M21 20V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1zm-2-1H5V5h14v14z"
+                  />
+                  <path
+                    d="M10.381 12.309l3.172 1.586a1 1 0 0 0 1.305-.38l3-5-1.715-1.029-2.523 4.206-3.172-1.586a1.002 1.002 0 0 0-1.305.38l-3 5 1.715 1.029 2.523-4.206z"
+                  />
+                </svg>
+              </div>
 
-				<div class="info-box active">
-					<div class="box-icon">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3,21c0,0.553,0.448,1,1,1h16c0.553,0,1-0.447,1-1v-1c0-3.714-2.261-6.907-5.478-8.281C16.729,10.709,17.5,9.193,17.5,7.5 C17.5,4.468,15.032,2,12,2C8.967,2,6.5,4.468,6.5,7.5c0,1.693,0.771,3.209,1.978,4.219C5.261,13.093,3,16.287,3,20V21z M8.5,7.5 C8.5,5.57,10.07,4,12,4s3.5,1.57,3.5,3.5S13.93,11,12,11S8.5,9.43,8.5,7.5z M12,13c3.859,0,7,3.141,7,7H5C5,16.141,8.14,13,12,13z"/></svg>
-					</div>
-					
-					<div class="box-content">
-						<span class="big">Cerrar sesión</span>
-						E ir a la página de inicio
-					</div>
-				</div>
-				
-				
-			</section>
-		
-			<section class="person-boxes">
-				<div class="person-box">
-					<a href="/course-list">
-                        <img src="../../public/documentation-icon.png" alt="">
-                        <h4>Lista de cursos</h4>
-                    </a>
-				</div>
+              <div class="box-content">
+                <span class="big">¡No pares de<br />aprender!</span>
+                Haz click debajo para<br />acceder a la lista de cursos
+              </div>
+            </div>
 
-				<div class="social-box">
-					<a href="">
-                        <img id="facebook" src="../../public/facebook-circle.png">
-                    </a>
-                    <a href="">
-                        <img id="instagram" src="../../public/ig-circle.png">
-                    </a>
-                    <a href="">
-                        <img id="twitter" src="../../public/twitter-circle.png">
-                    </a>
-                    <a href="">
-                        <img id="email" src="../../public/email-icon.png">
-                    </a>
-				</div>
-				
-				<div class="person-box">
-					<a href="/">
-            <img id="logout" src="../../public/logout-circle.png">
-            <h4>Salir del dashboard</h4>
-          </a>
-				</div>
-			</section>
-		</div>
-	</main>
-</div>  
-</body>
+            <div class="info-box">
+              <div class="box-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 3C6.486 3 2 6.364 2 10.5c0 2.742 1.982 5.354 5 6.678V21a.999.999 0 0 0 1.707.707l3.714-3.714C17.74 17.827 22 14.529 22 10.5 22 6.364 17.514 3 12 3zm0 13a.996.996 0 0 0-.707.293L9 18.586V16.5a1 1 0 0 0-.663-.941C5.743 14.629 4 12.596 4 10.5 4 7.468 7.589 5 12 5s8 2.468 8 5.5-3.589 5.5-8 5.5z"
+                  />
+                </svg>
+              </div>
+
+              <div class="box-content">
+                <span class="big">¿Tienes alguna duda?</span>
+                Contáctanos debajo mediante estas redes
+              </div>
+            </div>
+
+            <div class="info-box active">
+              <div class="box-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M3,21c0,0.553,0.448,1,1,1h16c0.553,0,1-0.447,1-1v-1c0-3.714-2.261-6.907-5.478-8.281C16.729,10.709,17.5,9.193,17.5,7.5 C17.5,4.468,15.032,2,12,2C8.967,2,6.5,4.468,6.5,7.5c0,1.693,0.771,3.209,1.978,4.219C5.261,13.093,3,16.287,3,20V21z M8.5,7.5 C8.5,5.57,10.07,4,12,4s3.5,1.57,3.5,3.5S13.93,11,12,11S8.5,9.43,8.5,7.5z M12,13c3.859,0,7,3.141,7,7H5C5,16.141,8.14,13,12,13z"
+                  />
+                </svg>
+              </div>
+
+              <div class="box-content">
+                <span class="big">Cerrar sesión</span>
+                E ir a la página de inicio
+              </div>
+            </div>
+          </section>
+
+          <section class="person-boxes">
+            <div class="person-box">
+              <router-link to="course-list">
+                <img src="../../public/documentation-icon.png" alt="" />
+                <h4>Lista de cursos</h4>
+              </router-link>
+            </div>
+
+            <div class="social-box">
+              <a href="">
+                <img id="facebook" src="../../public/facebook-circle.png" />
+              </a>
+              <a href="">
+                <img id="instagram" src="../../public/ig-circle.png" />
+              </a>
+              <a href="">
+                <img id="twitter" src="../../public/twitter-circle.png" />
+              </a>
+              <a href="">
+                <img id="email" src="../../public/email-icon.png" />
+              </a>
+            </div>
+
+            <div class="person-box">
+              <router-link to="/">
+                <img id="logout" src="../../public/logout-circle.png" />
+                <h4>Salir del dashboard</h4>
+              </router-link>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
 </template>p
 
 <script>
@@ -123,14 +157,14 @@ body {
   font-family: Open Sans, Helvetica, sans-serif;
 }
 .dashboard {
-    margin-top: -70px;
+  margin-top: -70px;
   display: grid;
   width: 100%;
   height: 100%;
   grid-gap: 0;
   grid-template-columns: 300px auto;
   grid-template-rows: 40px auto;
-  grid-template-areas: 'menu search' 'menu content';
+  grid-template-areas: "menu search" "menu content";
 }
 .search-wrap {
   grid-area: search;
@@ -219,7 +253,7 @@ body {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .menu-wrap .user figcaption {
   margin: 0;
@@ -372,8 +406,8 @@ body {
 }
 
 .person-boxes .person-box a img {
-    width: 230px;
-    margin-top: -20px;
+  width: 230px;
+  margin-top: -20px;
 }
 
 .content-wrap .person-boxes {
@@ -392,28 +426,27 @@ body {
 }
 
 .person-boxes .social-box a #logout {
-    width: 140px;
-    margin: 4px;
+  width: 140px;
+  margin: 4px;
 }
 
 .person-boxes .social-box a #facebook {
-    width: 140px;
-    margin: 4px;
+  width: 140px;
+  margin: 4px;
 }
 .person-boxes .social-box a #instagram {
-    width: 180px;
-    margin: 4px;
+  width: 180px;
+  margin: 4px;
 }
 .person-boxes .social-box a #twitter {
-    width: 130px;
-    margin-left: -15px;
+  width: 130px;
+  margin-left: -15px;
 }
 .person-boxes .social-box a #email {
-    width: 130px;
-    margin-top: 4px;
-    margin-left: 40px;
+  width: 130px;
+  margin-top: 4px;
+  margin-left: 40px;
 }
-
 
 .content-wrap .person-boxes .person-box {
   background: #fff;
@@ -441,7 +474,7 @@ body {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .content-wrap .person-boxes .person-box .box-avatar .no-name {
   display: flex;
@@ -503,10 +536,10 @@ body {
 }
 
 .dashboard span p {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding-top: 20px;
-    padding-left: 40px;
-    font-size: 60px;
-    padding-bottom: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 20px;
+  padding-left: 40px;
+  font-size: 60px;
+  padding-bottom: 10px;
 }
 </style>

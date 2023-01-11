@@ -9,22 +9,22 @@ export default createStore({
         user: null
     },
     mutations: {
-        SET_USER (state, user) {
-            state.user= user
+        SET_USER(state, user) {
+            state.user = user
         },
 
-        CLEAR_USER (state) {
+        CLEAR_USER(state) {
             state.user = null
         }
     },
     actions: {
-        async login ({commit}, details) {
+        async login({ commit }, details) {
             const { email, password } = details
-            try{
+            try {
                 await signInWithEmailAndPassword(auth, email, password)
             }
             catch (error) {
-                switch(error.code) {
+                switch (error.code) {
                     case 'auth/user-not-found':
                         alert("Usuario no encontrado")
                         break
@@ -32,7 +32,7 @@ export default createStore({
                         alert("Contraseña incorrecta")
                         break
                     default:
-                        alert ( "Algo salió mal " )
+                        alert("Algo salió mal ")
                 }
 
                 return
@@ -55,68 +55,69 @@ export default createStore({
             router.push('/dashboard-usr')
         },
 
-        async register ({commit}, details) {
+        async register({ commit }, details) {
             const { email, password } = details
-            try{
+            try {
                 await createUserWithEmailAndPassword(auth, email, password)
                 commit('SET_USER', auth.currentUser)
                 router.push('/dashboard-usr')
             }
             catch (error) {
-                switch ( error.code ) {
-                    case 'auth/email-already-in-use' :
-                      alert ( "Ese email está en uso" )
-                      router.push('/login')
-                     break
-                    case 'auth/invalid-email' :
-                      alert ( "Email inválido" )
-                      router.push('/login')
-                      break
-                    case 'auth/operation-not-allowed' :
-                      alert ( "Operación no permitida" )
-                      router.push('/login')
-                      break
+                switch (error.code) {
+                    case 'auth/email-already-in-use':
+                        alert("Ese email está en uso")
+                        router.push('/login')
+                        break
+                    case 'auth/invalid-email':
+                        alert("Email inválido")
+                        router.push('/login')
+                        break
+                    case 'auth/operation-not-allowed':
+                        alert("Operación no permitida")
+                        router.push('/login')
+                        break
                     case 'auth/weak-password':
-                      alert ( "Prueba con una contraseña más robusta" )
-                      router.push('/login')
-                      break
-                   default:
-                      alert ( "Algo salió mal" )
-                      router.push('/login')
-               // writeUserData()
-                router.push('/login')
-            }}
+                        alert("Prueba con una contraseña más robusta")
+                        router.push('/login')
+                        break
+                    default:
+                        alert("Algo salió mal")
+                        router.push('/login')
+                        // writeUserData()
+                        router.push('/login')
+                }
+            }
         },
-       
-        
+
+
         async createUser(user) {
-            try{
+            try {
                 await createUserWithEmailAndPassword(user)
             }
-            finally{
+            finally {
                 alert("Usuario creado")
             }
         },
 
-        async logout ({commit}) {
+        async logout({ commit }) {
             await signOut(auth)
 
             commit('CLEAR_USER')
             router.push('/login')
 
         },
-        
-        fetchUser ({ commit }){
-         auth.onAuthStateChanged(async user => { 
-            if (user === null){ 
-                commit('CLEAR_USER')
-             } else {
-                commit('SET_USER', user)
-                if (router.isReady() && router.currentRoute.value.path === '/login' ) {
-                    router.push('/dashboard-usr')
+
+        fetchUser({ commit }) {
+            auth.onAuthStateChanged(async user => {
+                if (user === null) {
+                    commit('CLEAR_USER')
+                } else {
+                    commit('SET_USER', user)
+                    if (router.isReady() && router.currentRoute.value.path === '/login') {
+                        router.push('/dashboard-usr')
+                    }
                 }
-            } 
-         })   
+            })
         }
 
     }

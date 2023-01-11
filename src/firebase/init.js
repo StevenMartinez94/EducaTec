@@ -1,5 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { getDatabase, set, ref, onValue } from "firebase/database"
 import { getAuth } from 'firebase/auth'
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -19,18 +20,21 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-//var database = app.database()
-//function save() {
-//  var email = document.getElementById('email').value
-//  var password = document.getElementById('password').value
-//  var username = document.getElementById('username').value
-//
-//  database.ref('users/' + username).set({
-//    email: email,
-//    password: password,
-//    username: username
-//  })
-//}
+const database = getDatabase(app)
+
 const auth = getAuth(app)
 
-export {auth}
+export { auth, app }
+
+export function writeObjectData(payload, collectionPath) {
+  set(ref(database, collectionPath), payload)
+}
+
+export function getObjectData(collectionPath) {
+  const collectionReference = ref(database, collectionPath)
+  var data = null;
+  onValue(collectionReference, (snapchot) => {
+    data = snapchot.val()
+  })
+  return data;
+}

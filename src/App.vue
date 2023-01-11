@@ -1,12 +1,12 @@
 <template>
-  <img alt="EducaTec-logo" src="../public/prueba.png">
-  <router-view/>  
+  <img alt="EducaTec-logo" src="../public/prueba.png" />
+  <router-view />
 </template>
 
 <script>
 export default {
-  name: 'App',
-}
+  name: "App",
+};
 </script>
 
 <style>

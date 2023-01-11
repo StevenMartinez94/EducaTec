@@ -1,19 +1,16 @@
 <template>
   <MDBNavbar light bg="light" container>
-    <MDBNavbarToggler @click="collapse1 = !collapse1" target="#navbarToggleExternalContent">
+    <MDBNavbarToggler
+      @click="collapse1 = !collapse1"
+      target="#navbarToggleExternalContent"
+    >
     </MDBNavbarToggler>
   </MDBNavbar>
   <MDBCollapse v-model="collapse1" id="navbarToggleExternalContent">
     <div class="bg-light shadow-3 p-4">
-      <MDBBtn color="link" block class="border-bottom m-0">
-        Link 1
-      </MDBBtn>
-      <MDBBtn color="link" block class="border-bottom m-0">
-        Link 2
-      </MDBBtn>
-      <MDBBtn color="link" block class="border-bottom m-0">
-        Link 3
-      </MDBBtn>
+      <MDBBtn color="link" block class="border-bottom m-0"> Link 1 </MDBBtn>
+      <MDBBtn color="link" block class="border-bottom m-0"> Link 2 </MDBBtn>
+      <MDBBtn color="link" block class="border-bottom m-0"> Link 3 </MDBBtn>
     </div>
   </MDBCollapse>
   <p>
@@ -229,31 +226,28 @@
 </template>
 
 <script>
-  import {
+import {
+  MDBNavbar,
+  MDBNavbarToggler,
+  MDBCollapse,
+  MDBBtn,
+} from "mdb-vue-ui-kit";
+import { ref } from "vue";
+export default {
+  components: {
     MDBNavbar,
     MDBNavbarToggler,
     MDBCollapse,
-    MDBBtn
-  } from "mdb-vue-ui-kit";
-  import {
-    ref
-  } from "vue";
-  export default {
-    components: {
-      MDBNavbar,
-      MDBNavbarToggler,
-      MDBCollapse,
-      MDBBtn
-    },
-    setup() {
-      const collapse1 = ref(false);
-      return {
-        collapse1
-      }
-    }
-  };
+    MDBBtn,
+  },
+  setup() {
+    const collapse1 = ref(false);
+    return {
+      collapse1,
+    };
+  },
+};
 </script>
 
 <style scoped>
-
 </style>
