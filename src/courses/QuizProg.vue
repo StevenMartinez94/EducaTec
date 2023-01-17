@@ -29,12 +29,12 @@
             :value="index"
             v-model="getCurrentQuestion.selected"
             :disable="getCurrentQuestion.selected"
-            @change="setAnswer"
+            @change="setAnswer(index)"
           />
           <span>{{ option }}</span>
         </label>
       </div>
-      <button @click="nextQuestion" :disabled="!getCurrentQuestion.selected">
+      <button @click="nextQuestion">
         {{
           getCurrentQuestion.index == questions.length - 1
             ? "Completado"
@@ -74,10 +74,10 @@ const questions = ref([
   {
     question: "¿Qué es una variable?",
     answer:
-      "Es un espacio de memoria que guarda un valor puede cambiar con el tiempo",
+      "Es un espacio de memoria que guarda un valor que puede cambiar con el tiempo",
     options: [
       "Es un espacio de memoria cuyo valor nunca cambia con el tiempo",
-      "Es un espacio de memoria que guarda un valor puede cambiar con el tiempo",
+      "Es un espacio de memoria que guarda un valor que puede cambiar con el tiempo",
       "Es una pieza de la PC que se encarga de la salida de audio",
     ],
     selected: null,
@@ -106,7 +106,7 @@ const currentQuestion = ref(0);
 const score = computed(() => {
   let value = 0;
   questions.value.map((q) => {
-    if (q.selected == q.answer) {
+    if (q.options[q.selected] == q.answer) {
       value++;
     }
   });
@@ -228,6 +228,22 @@ button {
   text-transform: uppercase;
   font-size: 1.2rem;
   border-radius: 0.5rem;
+}
+
+#submit {
+  appearance: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  margin-left: 0rem;
+  background-color: green;
+  color: black;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  margin-top: 15px;
 }
 
 button:disabled {

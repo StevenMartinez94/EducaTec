@@ -205,6 +205,9 @@
       </div>
     </section>
   </main>
+  <router-link to="/courses/intro-prog/ciclos">
+    <button id="next-lesson">Siguiente Lección</button>
+  </router-link>
 </template>
 
 <script>
@@ -223,7 +226,7 @@ export default {
     MDBBtn,
   },
   setup() {
-    const collapse1 = ref("/quiz");
+    const collapse1 = ref(false);
     return {
       collapse1,
     };
@@ -246,7 +249,7 @@ html {
 }
 
 main {
-  position: fixed;
+  position: relative;
   left: 50%;
   transform: translate(-50%, 0);
   max-width: 1280px;
@@ -306,6 +309,23 @@ img {
   background-size: cover;
   width: 100%;
 }
+
+#next-lesson {
+  appearance: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  margin-left: 0rem;
+  background-color: blue;
+  color: black;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  margin-top: 15px;
+}
+
 /*--------------------------
 
      Media Queries 
